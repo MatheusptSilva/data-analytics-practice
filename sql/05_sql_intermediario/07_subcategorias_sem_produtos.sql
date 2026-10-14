@@ -1,12 +1,14 @@
 -- 7. Algumas subcategorias não possuem nenhum exemplar de produto. Identifique que subcategorias são essas.
 
-SELECT * FROM DimProduct
-SELECT * FROM DimProductSubcategory
+-- banco de dados
+USE ContosoRetailDW;
 
-SELECT 
+-- Parte da tabela de subcategorias e mantém quem não encontrou correspondência em DimProduct.
+SELECT
+	ps.ProductSubcategoryKey,
 	ps.ProductSubcategoryName
 FROM
-	DimProduct p
-FULL JOIN DimProductSubcategory ps
-	ON p.ProductSubcategoryKey = ps.ProductSubcategoryKey
-WHERE p.ProductName IS NULL;
+	DimProductSubcategory ps
+LEFT JOIN DimProduct p
+	ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey
+WHERE p.ProductKey IS NULL;

@@ -1,8 +1,11 @@
 -- 2. Identifique uma coluna em comum entre as tabelas DimProductSubcategory e DimProductCategory. Utilize essa coluna para complementar informações na tabela DimProductSubcategory a partir da DimProductCategory. Utilize o LEFT JOIN.
 
+-- banco de dados
+USE ContosoRetailDW;
 
-SELECT * FROM DimProductSubcategory
-SELECT * FROM DimProductCategory
+
+SELECT * FROM DimProductSubcategory;
+SELECT * FROM DimProductCategory;
 
 SELECT
 	ps.ProductSubcategoryKey,

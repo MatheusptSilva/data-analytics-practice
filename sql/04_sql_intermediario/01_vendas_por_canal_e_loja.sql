@@ -1,4 +1,8 @@
 -- 1. a) Faça um resumo da quantidade vendida (SalesQuantity) de acordo com o canal de vendas (channelkey).
+
+-- banco de dados
+USE ContosoRetailDW;
+
 SELECT TOP(10) * FROM FactSales;
 
 SELECT 
@@ -11,7 +15,7 @@ GROUP BY channelKey;
 -- b) Faça um agrupamento mostrando a quantidade total vendida (SalesQuantity) e quantidade total devolvida (Return Quantity) de acordo com o ID das lojas (StoreKey).
 SELECT 
 	StoreKey,
-	SUM(SalesQuantity) AS 'Total Vendidao',
+	SUM(SalesQuantity) AS 'Total Vendido',
 	SUM(ReturnQuantity) AS 'Total Devolvido'
 FROM
 	FactSales

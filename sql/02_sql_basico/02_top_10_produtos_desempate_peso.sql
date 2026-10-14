@@ -3,7 +3,7 @@
 -- Caso ainda assim haja um empate entre 2 ou mais produtos, pense em uma forma de criar um segundo critério de desempate (além do peso).
 
 -- Banco de dados
-USE ContosoRetailDW
+USE ContosoRetailDW;
 
 SELECT * FROM DimProduct;
 

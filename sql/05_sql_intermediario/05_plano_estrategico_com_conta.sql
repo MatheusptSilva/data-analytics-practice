@@ -1,5 +1,8 @@
 -- A tabela FactStrategyPlan resume o planejamento estratégico da empresa. Cada linha representa um montante destinado a uma determinada AccountKey. 
 
+-- banco de dados
+USE ContosoRetailDW;
+
 -- a) Faça um SELECT das 100 primeiras linhas de FactStrategyPlan para reconhecer a tabela.
 SELECT TOP(100) * FROM FactStrategyPlan;
 

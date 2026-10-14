@@ -8,6 +8,6 @@ SELECT * FROM DimProduct;
 
 -- 4 Utilize um comando em SQL para retornar apenas os nomes dos fornecedores na tabela dimProduct e renomeie essa nova coluna da tabela.
 SELECT 
-	DISTINCT Manufacturer AS "Fornecedores"
+	DISTINCT Manufacturer AS 'Fornecedores'
 FROM
 	DimProduct;

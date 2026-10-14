@@ -1,6 +1,9 @@
 -- Você deverá descobrir o peso total para cada tipo de produto (StockTypeName). A tabela deve considerar apenas a marca 'Contoso' e ter os seus valores classificados em ordem decrescente
 
-SELECT * FROM DimProduct
+-- banco de dados
+USE ContosoRetailDW;
+
+SELECT * FROM DimProduct;
 
 SELECT 
 	StockTypeName AS 'Tipo',

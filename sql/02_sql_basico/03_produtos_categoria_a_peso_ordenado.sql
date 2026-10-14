@@ -3,7 +3,7 @@
 -- Faça uma consulta no banco de dados para descobrir quais são estes produtos que estão na categoria A.
 
 -- Banco de dados
-USE ContosoRetailDW
+USE ContosoRetailDW;
 
 -- a Você deverá retornar apenas 2 colunas nessa consulta: Nome do Produto e Peso.
 SELECT * FROM DimProduct;
@@ -13,7 +13,7 @@ SELECT
 	Weight
 FROM
 	DimProduct
-WHERE Weight > 100
+WHERE Weight > 100;
 
 -- b Renomeie essas colunas com nomes mais intuitivos.
 SELECT
@@ -21,7 +21,7 @@ SELECT
 	Weight AS 'Peso'
 FROM
 	DimProduct
-WHERE Weight > 100
+WHERE Weight > 100;
 
 -- c Ordene esses produtos do mais pesado para o mais leve.
 SELECT

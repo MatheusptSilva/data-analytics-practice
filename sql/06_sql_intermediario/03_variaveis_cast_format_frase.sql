@@ -6,11 +6,12 @@ Você precisará criar um código em SQL capaz de juntar as informações fornec
 O resultado final a ser alcançado é mostrado no print abaixo:
 Dica: você precisará utilizar as funções CAST e FORMAT para chegar no resultado. */
 
-DECLARE @nome VARCHAR(20) = 'Sarah',
-        @data_nascimento DATETIME = '2008-11-10',
-        @nun_pets INT = 1;
+-- A data é informada no formato ISO (yyyy-mm-dd), que não depende da configuração de idioma do servidor.
+DECLARE @nome VARCHAR(50) = 'André',
+        @data_nascimento DATE = '1998-02-10',
+        @num_pets INT = 2;
 
 SELECT 'Meu nome é ' + @nome
        + ', nasci em ' + FORMAT(@data_nascimento, 'dd/MM/yyyy')
-       + ' e tenho ' + CAST(@nun_pets AS VARCHAR(10))
+       + ' e tenho ' + CAST(@num_pets AS VARCHAR(10))
        + ' pets.' AS 'Informações do usuário';

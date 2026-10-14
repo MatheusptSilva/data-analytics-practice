@@ -1,5 +1,8 @@
 -- 6. Imagine que você precise extrair um relatório da tabela DimStore, com informações de lojas. Mas você precisa apenas das lojas que não estão mais funcionando atualmente.
 
+-- banco de dados
+USE ContosoRetailDW;
+
 -- a Utilize a coluna de Status para filtrar a tabela e trazer apenas as lojas que não estão mais funcionando.
 SELECT * FROM DimStore
 WHERE Status = 'Off';

@@ -1,5 +1,8 @@
 -- 9. Faça uma tabela resumo mostrando a quantidade total de funcionários de acordo com o Departamento (DepartmentName). Importante: Você deverá considerar apenas os funcionários ativos.
 
+-- banco de dados
+USE ContosoRetailDW;
+
 SELECT * FROM DimEmployee;
 
 SELECT

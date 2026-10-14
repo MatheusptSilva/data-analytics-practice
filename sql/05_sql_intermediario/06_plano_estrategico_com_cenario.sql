@@ -4,8 +4,11 @@
 -- • ScenarioName
 -- • Amount
 
-SELECT TOP(10) * FROM FactStrategyPlan
-SELECT * FROM DimScenario
+-- banco de dados
+USE ContosoRetailDW;
+
+SELECT TOP(10) * FROM FactStrategyPlan;
+SELECT * FROM DimScenario;
 
 SELECT
 	fcp.StrategyPlanKey,

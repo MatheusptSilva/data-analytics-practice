@@ -4,20 +4,22 @@
 -- banco de dados
 USE ContosoRetailDW;
 
--- verificando a tabelas
-SELECT * FROM DimProduct;
+-- Exploração inicial (não faz parte da resposta final)
+-- SELECT TOP(10) * FROM DimProduct;
+-- SELECT TOP(10) * FROM FactSales;
 
-SELECT TOP(10) * FROM FactSales;
-
--- -- 5 Utilize um comando em SQL para retornar apenas os nomes dos fornecedores na tabela dimProduct e renomeie essa nova coluna da tabela.
-SELECT 
-	DISTINCT Manufacturer AS "Fornecedores"
-FROM
-	DimProduct;
-
---
-SELECT 
-	DISTINCT ProductKey
-FROM 
-	FactSales
-
+-- Existe algum produto cadastrado que nunca foi vendido?
+-- NOT EXISTS compara DimProduct com FactSales e não sofre com valores NULL (ao contrário do NOT IN).
+SELECT
+	CASE
+		WHEN EXISTS (
+			SELECT 1
+			FROM DimProduct AS p
+			WHERE NOT EXISTS (
+				SELECT 1
+				FROM FactSales AS f
+				WHERE f.ProductKey = p.ProductKey
+			)
+		) THEN 'Sim, existe produto sem venda'
+		ELSE 'Não, todos os produtos foram vendidos'
+	END AS Resultado;

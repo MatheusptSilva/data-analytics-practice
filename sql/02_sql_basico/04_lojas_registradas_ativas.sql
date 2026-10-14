@@ -1,6 +1,6 @@
 -- 4 Você foi alocado para criar um relatório das lojas registradas atualmente na Contoso.
 
--- Banco de dados 
+-- Banco de dados
 USE ContosoRetailDW;
 
 -- a Descubra quantas lojas a empresa tem no total. Na consulta que você deverá fazer à tabela DimStore, retorne as seguintes informações: StoreName, OpenDate, EmployeeCount
@@ -11,6 +11,9 @@ SELECT
 FROM
 	DimStore;
 
+-- Total de lojas
+SELECT COUNT(*) AS 'Total de lojas' FROM DimStore;
+
 -- b Renomeeie as colunas anteriores para deixar a sua consulta mais intuitiva.
 SELECT
 	StoreName AS 'Nome da loja',
@@ -20,13 +23,15 @@ FROM
 	DimStore;
 
 -- c Dessas lojas, descubra quantas (e quais) lojas ainda estão ativas.
-SELECT * FROM DimStore;
-
+-- Quais:
 SELECT
 	StoreName AS 'Nome da loja',
 	OpenDate AS 'Data de abertura',
-	EmployeeCount AS 'QTD Funcionários',
+	EmployeeCount AS 'Qtd. Funcionários',
 	Status
 FROM
 	DimStore
 WHERE Status = 'On';
+
+-- Quantas:
+SELECT COUNT(*) AS 'Lojas ativas' FROM DimStore WHERE Status = 'On';

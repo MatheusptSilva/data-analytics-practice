@@ -10,6 +10,10 @@ A sua consulta deve considerar apenas as linhas de vendas referentes a produtos 
 desconto (PromotionName <> ‘No Discount’). Além disso, você deverá ordenar essa tabela de
 acordo com a coluna DateKey, em ordem crescente.*/
 
+-- banco de dados
+USE ContosoRetailDW;
+
+-- TOP(10) apenas para pré-visualizar (a tabela tem milhões de linhas); remova para o resultado completo.
 SELECT 
 	TOP(10)
 	OnlineSalesKey,

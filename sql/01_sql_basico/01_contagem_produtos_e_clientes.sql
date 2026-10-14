@@ -4,7 +4,7 @@
 USE ContosoRetailDW;
 
 -- 1.a Existem 2.517 produtos cadastrados na base e, se não tiver, você deverá reportar ao seu gestor para saber se existe alguma defasagem no controle dos produtos.
-SELECT COUNT(*) FROM DimProduct;
+SELECT COUNT(*) AS 'Qtd. de produtos' FROM DimProduct;
 
 -- 1.b Até o mês passado, a empresa tinha um total de 19.500 clientes na base de controle. Verifique se esse número aumentou ou reduziu.
-SELECT COUNT(*) FROM DimCustomer;
+SELECT COUNT(*) AS 'Qtd. de clientes' FROM DimCustomer;

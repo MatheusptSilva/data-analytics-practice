@@ -1,5 +1,8 @@
 -- 5. Agora você precisa fazer uma análise dos produtos. Será necessário descobrir as seguintes informações:
 
+-- banco de dados
+USE ContosoRetailDW;
+
 -- a Quantidade distinta de cores de produtos.
 -- b Quantidade distinta de marcas
 -- c Quantidade distinta de classes de produto

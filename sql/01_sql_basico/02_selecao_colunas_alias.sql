@@ -17,9 +17,9 @@ FROM
 
 -- 2.b Renomeie as colunas dessa tabela usando o alias (comando AS).
 SELECT
-	CustomerKey AS "ID do Cliente",
-	FirstName AS "Nome", 
-	EmailAddress AS "E-mail",
-	BirthDate AS "Data de Nascimento"
+	CustomerKey AS 'ID do Cliente',
+	FirstName AS 'Nome', 
+	EmailAddress AS 'E-mail',
+	BirthDate AS 'Data de Nascimento'
 FROM
 	DimCustomer;

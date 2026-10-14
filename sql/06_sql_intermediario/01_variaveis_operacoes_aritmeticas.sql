@@ -13,29 +13,26 @@ e) Arredonde o resultado da letra d) para 2 casas decimais.
 
 */
 
-DECLARE @valor1 INT = 10, @valor2 INT = 5, @valor3 INT = 34, @valor4 INT = 7
+DECLARE @valor1 INT = 10, @valor2 INT = 5, @valor3 INT = 34, @valor4 INT = 7;
 
-SELECT @valor1, @valor2, @valor3, @valor4
+SELECT @valor1 AS valor1, @valor2 AS valor2, @valor3 AS valor3, @valor4 AS valor4;
 
--- a) 
-DECLARE @soma INT = @valor1 + @valor2
-SELECT @soma
-
+-- a)
+DECLARE @soma INT = @valor1 + @valor2;
+SELECT @soma AS soma;
 
 -- b)
-DECLARE @subtracao INT = @valor3 - @valor2
-SELECT @subtracao
-
+DECLARE @subtracao INT = @valor3 - @valor4;
+SELECT @subtracao AS subtracao;
 
 -- c)
-DECLARE @multiplicacao INT = @valor1 * @valor4
-SELECT @multiplicacao
+DECLARE @multiplicacao INT = @valor1 * @valor4;
+SELECT @multiplicacao AS multiplicacao;
 
-
--- d)
-DECLARE @divisao FLOAT = @valor3 / @valor4
-SELECT @divisao
-
+-- d) Divisão de INT por INT retorna INT no SQL Server (34 / 7 = 4).
+-- Por isso um dos valores é convertido para DECIMAL antes da divisão.
+DECLARE @divisao DECIMAL(10,4) = CAST(@valor3 AS DECIMAL(10,4)) / @valor4;
+SELECT @divisao AS divisao;
 
 -- e)
-SELECT ROUND(@divisao, 2)
+SELECT CAST(ROUND(@divisao, 2) AS DECIMAL(10,2)) AS divisao_arredondada;

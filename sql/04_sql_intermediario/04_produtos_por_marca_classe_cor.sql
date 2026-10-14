@@ -1,4 +1,8 @@
 -- 4. a) Faça um agrupamento e descubra a quantidade total de produtos por marca.
+
+-- banco de dados
+USE ContosoRetailDW;
+
 SELECT * FROM DimProduct;
 
 SELECT

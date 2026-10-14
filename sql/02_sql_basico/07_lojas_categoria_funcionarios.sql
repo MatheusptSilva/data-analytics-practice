@@ -1,5 +1,8 @@
 -- De acordo com a quantidade de funcionários, cada loja receberá uma determinada quantidade de máquinas de café. As lojas serão divididas em 3 categorias:
 
+-- banco de dados
+USE ContosoRetailDW;
+
 -- CATEGORIA 1: De 1 a 20 funcionários -> 1 máquina de café
 -- CATEGORIA 2: De 21 a 50 funcionários -> 2 máquinas de café
 -- CATEGORIA 3: Acima de 51 funcionários -> 3 máquinas de café
@@ -9,11 +12,11 @@ SELECT * FROM DimStore;
 
 -- 1
 SELECT * FROM DimStore
-WHERE EmployeeCount BETWEEN 1 AND 20
+WHERE EmployeeCount BETWEEN 1 AND 20;
 
 -- 2 
 SELECT * FROM DimStore
-WHERE EmployeeCount BETWEEN 21 AND 50
+WHERE EmployeeCount BETWEEN 21 AND 50;
 
 -- 3 
 SELECT * FROM DimStore
